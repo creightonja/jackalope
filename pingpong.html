@@ -1,26 +1,25 @@
+<!doctype html>
 <html>
 <body>
-  <h1></h1>
-  <ul id="ping">
-    
-  </ul>
+  <h1>Ping Pong Test</h1>
+  <ul id="ping"></ul>
 <script>
-function myFunction() {
-    var pingNum = prompt("To what number shall you ping-pong?", "35");
+function pingFunction() {  // begin ping-pong function
+    var pingNum = prompt("To what number shall you ping-pong?", "35"); // prompting user ping-pong number
     
-    if (pingNum != null) {
-      for (i = 1; i <= pingNum; i++){
-        if ((i % 3 == 0) && (i % 5 == 0)){
-          var out = "ping-pong";
+    if (pingNum != null) {  // setting input requirement
+      for (i = 1; i <= pingNum; i++){  // begin for loop
+        if ((i % 3 == 0) && (i % 5 == 0)){  // checking i for ping-pong match
+          var out = "ping-pong";  // setting ping-pong output
         }
-        else if (i % 3 == 0){
-          var out = "ping";
+        else if (i % 3 == 0){  // checking i for ping match
+          var out = "ping";  // setting ping output
         }
-        else if (i % 5 == 0){
-          var out = "pong"
+        else if (i % 5 == 0){  // checking i for pong match
+          var out = "pong"  // setting pong output
         }
         else {
-          var out = i;
+          var out = i;  // setting output to number for no match
         }
         var newLi = document.createElement("li"); // creating new li
         newLi.appendChild(document.createTextNode(out)); // appending var out to new li
@@ -28,7 +27,7 @@ function myFunction() {
       }
     }
   }
-  myFunction();
+  pingFunction();  // running function
 </script>
 </body>
 </html>
