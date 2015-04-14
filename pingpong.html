@@ -6,10 +6,10 @@
   </ul>
 <script>
 function myFunction() {
-    var pingNum = prompt("To what number shall you ping?", "35");
+    var pingNum = prompt("To what number shall you ping-pong?", "35");
     
     if (pingNum != null) {
-      for (i = 0; i < pingNum; i++){
+      for (i = 1; i <= pingNum; i++){
         if ((i % 3 == 0) && (i % 5 == 0)){
           var out = "ping-pong";
         }
