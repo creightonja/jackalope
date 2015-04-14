@@ -1,6 +1,34 @@
 <html>
 <body>
+  <h1></h1>
+  <ul id="ping">
+    
+  </ul>
 <script>
+function myFunction() {
+    var pingNum = prompt("To what number shall you ping?", "35");
+    
+    if (pingNum != null) {
+      for (i = 0; i < pingNum; i++){
+        if ((i % 3 == 0) && (i % 5 == 0)){
+          var out = "ping-pong";
+        }
+        else if (i % 3 == 0){
+          var out = "ping";
+        }
+        else if (i % 5 == 0){
+          var out = "pong"
+        }
+        else {
+          var out = i;
+        }
+        var newLi = document.createElement("li"); // creating new li
+        newLi.appendChild(document.createTextNode(out)); // appending var out to new li
+        document.getElementById("ping").appendChild(newLi); // appending new li to ul "ping"
+      }
+    }
+  }
+  myFunction();
 </script>
 </body>
 </html>
